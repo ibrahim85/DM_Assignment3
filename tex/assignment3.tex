@@ -1,0 +1,96 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{amssymb}
+\usepackage{textcomp}     % to make an arrow \textrightarrow
+
+\usepackage{color}
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Data Mining Assignment 3,     [15 Points]}
+\author{\color{red} Your name goes here}\color{black}
+\date{\today}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+I declare that all material in this assessment task is my own work except where there is clear acknowledgement or reference to the work of others and I have complied and agreed to the UIS Academic Integrity Policy at the University website URL:\\ http://www.uis.edu/academicintegrity\\\\
+Student Name: 
+%replace the next line with your name
+\color{white} \color{red} Your name goes here\color{white} .\color{black}
+UID: 
+%replace the next line with your UID
+\color{white} .\color{red} Your UID \color{white}. \color{black} Date: \date{\today}
+
+\section*{Tree classifiers}
+\begin{itemize}
+\item 1.	Test the ID3 classifier on the weather data (in weather.nominal.arff.) 
+\subitem •	Report (250 words) your observations and the methodology of your test. 
+\item 2.	Weka has many filters to deal with missing data one or more will work well with the breast cancer dataset, investigate this and use the knowledge you gain to invent your own (heuristic) to deal with missing values in breast-cancer.arff and implement it, I leave the details of how you do this up to you just report what you did as the experimental methodology. For example, you may export the arff file data to a spreadsheet implement your heuristic as a formula, then re-export the data to make a new arff file. Name your fixed up dataset “UID- breast-cancer.arff”. Test it with ID3 and compare the results to those ID3 produces when classifying the data in breast-cancer.arff. 
+\subitem •	Report the heuristic algorithm, your test methodology (250 words max) and your observations on classifying the new file with ID3.  
+\item 3.	Run a series of tests on the soybean data (in soybean.arff) to determine ID3's ability to generalize. Divide the data into training and a test set. Run experiments with different numbers of training instances, in each case, using several random splits to be sure that the results are not fortuitous. 
+\subitem •	Report (250 words) your observations and the methodology of your test.
+\item 4.	Make a copy of the soybean.arff file. In a separate experimental process use the following technique. Split the original training data into a small training set UID-soybean-train.arff and a large test set UID-soybean-test.arff. If the ID3 tree classifier trained from the training set classifies test objects incorrectly, add some of the incorrectly classified objects to the training set and re-retrain the classifier, we are exploring the concepts from week 9-10 theory. Consider the following claim: "Accurate decision trees (here tree classifier ID3) are usually trained more quickly by this iterative method than by training directly from the entire training data set", do your observations support this claim?  
+\subitem •	Report (250 words) your observations and the methodology of your test.
+\item 5.	Present your results so that they are easy to understand (may be use graphical presentation) and explain them carefully. 
+\subitem •	Use only relevant data from WEKA (including unnecessary data here may adversely affect your grade, I am assessing your classifier training experimental work not your weka outputs)
+\end{itemize}
+Please submit in 2 different drop boxes as follows: Your report shall be submitted via the turnitin link only, reports submitted elsewhere will not be graded (Max similarity 15\%).\\ \\
+Your data files namely “UID- breast-cancer.arff, UID-soybean-test.arff, UID-soybean-train.arff”, and report TeX file, where UID is your own UID in an \emph{\color{blue}uncompressed\color{black}}.TAR archive, in the drop-box marked data.\\\\Please submit 1 report comprising 4 sections corresponding to the 4 tasks. The manuscript needs no abstract or introduction.  Each section will contain a brief description of the methodology followed for the task, observations, and opinions.
+\vfill
+%\vspace{1cm}
+\hrulefill
+\begin{center}
+{\scriptsize  Last updated: \today\-  
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+\\Typeset using \color{blue} \textsc{t\kern -.12em\lower.4ex\hbox{e}\kern-.1em xs}hop}
+\end{center}
+\end{document}  
